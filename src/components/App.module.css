@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.header {
+  flex: 0 0 auto;
+  background-color: #1f1f20;
+}
+.main {
+  flex: 1 0 auto;
+  background-color: #fff;
+}
+.footer {
+  flex: 0 0 auto;
+  background-color: #1f1f20;
+}

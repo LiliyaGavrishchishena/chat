@@ -1,0 +1,16 @@
+.nav {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
