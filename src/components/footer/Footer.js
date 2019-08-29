@@ -1,7 +1,7 @@
 import React from 'react';
 import navItems from '../../configs/main-nav';
 // components
-import Nav from './nav/Nav';
+import Nav from '../Nav/Nav';
 // styles
 import styles from './Footer.module.css';
 

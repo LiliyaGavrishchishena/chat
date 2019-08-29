@@ -1,0 +1,16 @@
+.item {
+  background-color: #e2e2e2;
+  border-radius: 4px;
+}
+.created {
+  font-size: 16px;
+  color: #a6a6a6;
+}
+.title {
+  font-size: 24px;
+  color: #8cc054;
+}
+.message {
+  font-size: 18px;
+  color: #1f1f1f;
+}

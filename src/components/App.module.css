@@ -8,6 +8,7 @@
   background-color: #1f1f20;
 }
 .main {
+  display: flex;
   flex: 1 0 auto;
   background-color: #fff;
 }

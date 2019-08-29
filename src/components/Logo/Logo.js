@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import routes from '../../../configs/routes';
+import routes from '../../configs/routes';
 // styles
 import styles from './Logo.module.css';
 
