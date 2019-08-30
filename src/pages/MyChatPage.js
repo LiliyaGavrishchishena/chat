@@ -1,6 +1,6 @@
 import React from 'react';
 // componets
-import ChatList from '../components/ChatList/ChatList';
+import ChatListContainer from '../components/ChatList/ChatListContainer';
 import MessageInput from '../components/MessageInput/MessageInput';
 // styles
 import styles from './MyChatPage.module.css';
@@ -8,7 +8,7 @@ import styles from './MyChatPage.module.css';
 const MyChatPage = () => (
   <section className={styles.container}>
     <div className={styles.list}>
-      <ChatList />
+      <ChatListContainer />
     </div>
     <div className={styles.input}>
       <MessageInput />

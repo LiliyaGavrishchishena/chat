@@ -1,12 +1,13 @@
 /*eslint-disable */
 import React from 'react';
 import { ReactComponent as Alt } from '../../assets/no-avatar.png';
+//components
+import LikeIcon from '../LikeIcon/LikeIcon';
 // styles
 import styles from './ChatItemView.module.css';
-import LikeIcon from '../LikeIcon/LikeIcon';
 
 const ChatItemView = ({
-  users: { id, user, avatar, created_at, message },
+  messages: { id, user, avatar, created_at, message },
   addLike,
 }) => (
   <div className={styles.item}>

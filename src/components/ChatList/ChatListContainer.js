@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { messagesOperations, messagesSelectors } from '../../redux/messages';
+import { likesActions } from '../../redux/likes';
 // components
-// import ChatItemView from './chatItem/ChatItemView';
+import Spinner from '../Spinner/Spinner';
 
-class ChatList extends Component {
-  state = {};
+class ChatListContainer extends Component {
+  state = { isLoading: false };
 
   componentDidMount() {
+    this.setState({ isLoading: true });
     const { fetchMessages } = this.props;
     fetchMessages();
   }
 
   render() {
-    return <div>List</div>;
+    const { isLoading } = this.state;
+    return <div>{!isLoading ? <Spinner /> : <div>List</div>}</div>; // исправить!
   }
 }
 
@@ -23,9 +26,10 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   fetchMessages: messagesOperations.fetchMessages,
+  addLike: likesActions.addLike,
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(ChatList);
+)(ChatListContainer);
