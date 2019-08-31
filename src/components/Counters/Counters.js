@@ -2,12 +2,12 @@ import React from 'react';
 // styles
 import styles from './Counters.module.css';
 
-const Counters = ({ messsages, users }) => (
+const Counters = ({ messages, users }) => (
   <div className={styles.counters}>
-    {messsages > 0 && (
+    {messages > 0 && (
       <p>
-        {messsages}
-        <span>messsages</span>
+        {messages}
+        <span>messages</span>
       </p>
     )}
     {users > 0 && (

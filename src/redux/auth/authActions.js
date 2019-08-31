@@ -1,20 +1,10 @@
 import types from './authActionTypes';
 
-const signInRequest = () => ({
-  type: types.LOGIN_REQUEST,
-});
-
-const signInSuccess = userName => ({
-  type: types.LOGIN_SUCCESS,
+const signIn = userName => ({
+  type: types.LOGIN,
   payload: userName,
 });
 
-const signInError = () => ({
-  type: types.LOGIN_ERROR,
-});
-
 export default {
-  signInRequest,
-  signInSuccess,
-  signInError,
+  signIn,
 };

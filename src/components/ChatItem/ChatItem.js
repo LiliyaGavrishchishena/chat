@@ -1,20 +1,16 @@
 /*eslint-disable */
 import React from 'react';
-import { ReactComponent as Alt } from '../../assets/no-avatar.png';
-//components
-import LikeIcon from '../LikeIcon/LikeIcon';
-// styles
-import styles from './ChatItemView.module.css';
+import styles from './ChatItem.module.css';
 
-const ChatItemView = ({
-  messages: { id, user, avatar, created_at, message },
+const ChatItem = ({
+  messages: { id, avatar, created_at, user, message },
   addLike,
 }) => (
   <div className={styles.item}>
     <img
       className={styles.img}
       src={avatar}
-      alt={<Alt />}
+      alt={user}
       width="77px"
       height="77px"
     />
@@ -31,8 +27,8 @@ const ChatItemView = ({
         Like
       </button>
     </div>
-    <LikeIcon />
+    {/* <LikeIcon /> */}
   </div>
 );
 
-export default ChatItemView;
+export default ChatItem;

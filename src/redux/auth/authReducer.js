@@ -1,15 +1,9 @@
 import types from './authActionTypes';
 
-const INIT = '';
-
-export default function authReducer(state = INIT, { type, payload }) {
+export default function authReducer(state = '', { type, payload }) {
   switch (type) {
-    case types.LOGIN_SUCCESS:
+    case types.LOGIN:
       return payload;
-
-    case types.LOGIN_REQUEST:
-    case types.LOGIN_ERROR:
-      return INIT;
 
     default:
       return state;

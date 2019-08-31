@@ -10,17 +10,18 @@ import LastMessage from '../LastMessage/LastMessage';
 // styles
 import styles from './Header.module.css';
 
-const Header = (users, messages) => (
+const Header = ({ usersCount, messagesCount, lastMessage }) => (
   <div className={styles.header}>
     <Logo className={styles.logo} />
-    <Counters users={users} messages={messages} />
-    <LastMessage />
+    <Counters users={usersCount} messages={messagesCount} />
+    <LastMessage date={lastMessage} />
   </div>
 );
 
 const mapStateToProps = state => ({
-  users: messagesSelectors.getUniqueUsers(state),
-  messages: messagesSelectors.getLastMessage(state),
+  usersCount: messagesSelectors.getUsersLength(state),
+  messagesCount: messagesSelectors.getMessageLength(state),
+  lastMessage: messagesSelectors.getLastMessage(state),
 });
 
 export default connect(

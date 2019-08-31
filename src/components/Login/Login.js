@@ -15,7 +15,8 @@ export default class Authentication extends Component {
   handleSubmitForm = e => {
     e.preventDefault();
     const { signIn } = this.props;
-    signIn(this.state);
+    const { userName } = this.state;
+    signIn(userName);
 
     this.resetForm();
   };

@@ -2,10 +2,11 @@ import React from 'react';
 // styles
 import styles from './LastMessage.module.css';
 
-const LastMessage = () => (
-  <div className={styles.last}>
-    <p>Last Message:</p>
-  </div>
-);
+const LastMessage = ({ date }) =>
+  console.log(date) || (
+    <div className={styles.last}>
+      {date._i && <p>Last Message: {date._i} </p>}
+    </div>
+  );
 
 export default LastMessage;
