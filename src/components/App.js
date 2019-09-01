@@ -3,9 +3,9 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 // components
 // import Spinner from './Spinner/Spinner';
-import Header from './header/Header';
+import Header from './Header/Header';
 import Main from '../pages/MyChatPage';
-import Footer from './footer/Footer';
+import Footer from './Footer/Footer';
 import Login from './Login/Login';
 
 // configs
