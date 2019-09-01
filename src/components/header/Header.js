@@ -13,7 +13,10 @@ import styles from './Header.module.css';
 const Header = ({ usersCount, messagesCount, lastMessage }) => (
   <div className={styles.header}>
     <Logo className={styles.logo} />
-    <Counters users={usersCount} messages={messagesCount} />
+    <div className={styles.info}>
+      <Counters users={usersCount} messages={messagesCount} />
+    </div>
+
     <LastMessage date={lastMessage} />
   </div>
 );

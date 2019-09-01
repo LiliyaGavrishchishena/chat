@@ -1,16 +1,60 @@
 .item {
   background-color: #e2e2e2;
   border-radius: 4px;
+  width: 53%;
+  padding: 14px;
+  display: flex;
+  margin-left: 15px;
 }
+.img {
+  margin-right: 14px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .created {
   font-size: 16px;
   color: #a6a6a6;
+  align-self: flex-end;
 }
 .title {
   font-size: 24px;
   color: #8cc054;
+  margin-bottom: 15px;
 }
 .message {
   font-size: 18px;
   color: #1f1f1f;
+}
+.button {
+  align-self: flex-end;
+  width: 20px;
+  height: 20px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  touch-action: manipulation;
+  cursor: pointer;
+  fill: #8cc054;
+}
+
+/*itemUser style*/
+.itemUser {
+  composes: item;
+  background-color: #4b4d4a;
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+.userMessage {
+  composes: message;
+  color: #fff;
+}
+.edit {
+  composes: button;
+  color: #fff;
 }

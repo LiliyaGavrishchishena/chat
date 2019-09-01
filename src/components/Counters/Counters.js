@@ -4,18 +4,22 @@ import styles from './Counters.module.css';
 
 const Counters = ({ messages, users }) => (
   <div className={styles.counters}>
-    {messages > 0 && (
-      <p>
-        {messages}
-        <span>messages</span>
-      </p>
-    )}
-    {users > 0 && (
-      <p>
-        {users}
-        <span>users</span>
-      </p>
-    )}
+    <div className={styles.data}>
+      {users > 0 && (
+        <p>
+          {users}
+          <span> users </span>
+        </p>
+      )}
+    </div>
+    <div>
+      {messages > 0 && (
+        <p>
+          {messages}
+          <span> messages</span>
+        </p>
+      )}
+    </div>
   </div>
 );
 

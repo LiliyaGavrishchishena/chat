@@ -5,6 +5,14 @@ export default function reducer(state = [], { type, payload }) {
     case types.FETCH_SUCCESS:
       return payload;
 
+    case types.ADD_MESSAGE:
+      return [...state, payload];
+
+    case types.EDIT_MESSAGE:
+      return state.map(message =>
+        message.id === payload.id ? payload : message,
+      );
+
     default:
       return state;
   }

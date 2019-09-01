@@ -16,6 +16,21 @@ const getUniqueUsers = createSelector(
   },
 );
 
+const getUsersAvatar = createSelector(
+  [getUniqueUsers, getAllMessages],
+  (users, messages) => {
+    const usersAvatar = users.map(user => {
+      const { avatar } = messages.find(message => message.user === user);
+      const userAvatar = {
+        user,
+        avatar,
+      };
+      return userAvatar;
+    });
+    return usersAvatar;
+  },
+);
+
 const getUsersLength = createSelector(
   getUniqueUsers,
   users => users.length,
@@ -35,4 +50,5 @@ export default {
   getUniqueUsers,
   getUsersLength,
   getLastMessage,
+  getUsersAvatar,
 };

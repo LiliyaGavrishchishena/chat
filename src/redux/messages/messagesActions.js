@@ -14,8 +14,20 @@ const fetchDataError = error => ({
   payload: error,
 });
 
+const addMessage = message => ({
+  type: types.ADD_MESSAGE,
+  payload: message,
+});
+
+const editMessage = message => ({
+  type: types.EDIT_MESSAGE,
+  payload: message,
+});
+
 export default {
   fetchDataRequest,
   fetchDataSuccess,
   fetchDataError,
+  addMessage,
+  editMessage,
 };
