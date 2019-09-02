@@ -4,10 +4,14 @@ import thunk from 'redux-thunk';
 
 import { messagesReducer } from '../redux/messages';
 import { authReducer } from '../redux/auth';
+import { modalReducer } from '../redux/modal';
+import { likesReducer } from '../redux/likes';
 
 const rootReducer = combineReducers({
   user: authReducer,
   messages: messagesReducer,
+  modal: modalReducer,
+  likes: likesReducer,
 });
 
 const middlewares = applyMiddleware(thunk);

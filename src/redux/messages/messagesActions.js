@@ -24,10 +24,16 @@ const editMessage = message => ({
   payload: message,
 });
 
+const deleteMessage = id => ({
+  type: types.DELETE_MESSAGE,
+  payload: id,
+});
+
 export default {
   fetchDataRequest,
   fetchDataSuccess,
   fetchDataError,
   addMessage,
   editMessage,
+  deleteMessage,
 };

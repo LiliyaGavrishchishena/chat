@@ -7,6 +7,7 @@ import Header from './Header/Header';
 import Main from '../pages/MyChatPage';
 import Footer from './Footer/Footer';
 import Login from './Login/Login';
+import Spinner from './Spinner/Spinner';
 
 // configs
 import routes from '../configs/routes';
@@ -35,7 +36,7 @@ const App = ({ user, signIn }) => (
       {!user ? (
         <Login signIn={signIn} />
       ) : (
-        <Suspense>
+        <Suspense fallback={Spinner}>
           <Switch>
             <Route exact path={routes.MAIN} component={Main} />
             <Route exact path={routes.HOME} component={AsyncHomePage} />

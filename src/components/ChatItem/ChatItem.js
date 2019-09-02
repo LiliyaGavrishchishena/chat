@@ -5,12 +5,14 @@ import noAva from '../../assets/no-avatar.png';
 //svg
 import { ReactComponent as LikeIcon } from '../../assets/heart.svg';
 import { ReactComponent as EditIcon } from '../../assets/login.svg';
+import { ReactComponent as DeleteIcon } from '../../assets//delete.svg';
 
 const ChatItem = ({
   messages: { id, avatar, created_at, user, message },
   addLike,
-  editMessage,
   userName,
+  openModal,
+  handleDeleteNote,
 }) => (
   <div className={userName !== user ? styles.item : styles.itemUser}>
     <img
@@ -35,13 +37,22 @@ const ChatItem = ({
           <LikeIcon />
         </button>
       ) : (
-        <button
-          className={styles.edit}
-          onClick={() => editMessage(id)}
-          type="button"
-        >
-          <EditIcon />
-        </button>
+        <div className={styles.btn}>
+          <button
+            className={styles.edit}
+            onClick={() => openModal(id)}
+            type="button"
+          >
+            <EditIcon />
+          </button>
+          <button
+            className={styles.edit}
+            onClick={() => handleDeleteNote(id)}
+            type="button"
+          >
+            <DeleteIcon />
+          </button>
+        </div>
       )}
     </div>
   </div>

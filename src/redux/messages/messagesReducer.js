@@ -12,6 +12,8 @@ export default function reducer(state = [], { type, payload }) {
       return state.map(message =>
         message.id === payload.id ? payload : message,
       );
+    case types.DELETE_MESSAGE:
+      return state.filter(message => message.id !== payload);
 
     default:
       return state;

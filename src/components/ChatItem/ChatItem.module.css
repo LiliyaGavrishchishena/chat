@@ -15,7 +15,10 @@
   flex-direction: column;
   width: 100%;
 }
-
+.btn {
+  display: flex;
+  justify-content: space-between;
+}
 .created {
   font-size: 16px;
   color: #a6a6a6;
@@ -29,6 +32,7 @@
 .message {
   font-size: 18px;
   color: #1f1f1f;
+  margin-bottom: 15px;
 }
 .button {
   align-self: flex-end;

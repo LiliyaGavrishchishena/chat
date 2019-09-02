@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { messagesOperations, messagesSelectors } from '../../redux/messages';
+import {
+  messagesOperations,
+  messagesSelectors,
+  messagesActions,
+} from '../../redux/messages';
 import { authSelectors } from '../../redux/auth';
 import { likesActions } from '../../redux/likes';
+import { modalActions } from '../../redux/modal';
+
 // components
 import Spinner from '../Spinner/Spinner';
 import ChatItem from '../ChatItem/ChatItem';
@@ -20,8 +26,14 @@ class ChatList extends Component {
     this.setState({ isLoading: false });
   }
 
+  handleDeleteNote = id => {
+    const { deleteMessage } = this.props;
+
+    deleteMessage(id);
+  };
+
   render() {
-    const { messages = [], addLike, editMessage, user } = this.props;
+    const { messages = [], addLike, editMessage, user, openModal } = this.props;
     const { isLoading } = this.state;
 
     return (
@@ -38,6 +50,8 @@ class ChatList extends Component {
                     addLike={addLike}
                     editMessage={editMessage}
                     userName={user}
+                    openModal={openModal}
+                    handleDeleteNote={this.handleDeleteNote}
                   />
                 </li>
               ))}
@@ -56,7 +70,9 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   fetchMessages: messagesOperations.fetchMessages,
+  deleteMessage: messagesActions.deleteMessage,
   addLike: likesActions.addLike,
+  openModal: modalActions.openModal,
 };
 
 export default connect(

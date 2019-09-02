@@ -32,7 +32,6 @@ class MessageInput extends Component {
       avatar = av;
     }
 
-    console.log(avatar);
     const obj = {
       id: new Date().getTime().toString(36),
       user,
