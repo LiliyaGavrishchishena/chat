@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import ScrollableFeed from 'react-scrollable-feed';
 
 import {
   messagesOperations,
@@ -38,26 +39,28 @@ class ChatList extends Component {
 
     return (
       <div>
-        {isLoading ? (
-          <Spinner />
-        ) : (
-          <section>
-            <ul className={styles.list}>
-              {messages.map(message => (
-                <li className={styles.item} key={message.id}>
-                  <ChatItem
-                    messages={message}
-                    addLike={addLike}
-                    editMessage={editMessage}
-                    userName={user}
-                    openModal={openModal}
-                    handleDeleteNote={this.handleDeleteNote}
-                  />
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
+        <ScrollableFeed>
+          {isLoading ? (
+            <Spinner />
+          ) : (
+            <section>
+              <ul className={styles.list}>
+                {messages.map(message => (
+                  <li className={styles.item} key={message.id}>
+                    <ChatItem
+                      messages={message}
+                      addLike={addLike}
+                      editMessage={editMessage}
+                      userName={user}
+                      openModal={openModal}
+                      handleDeleteNote={this.handleDeleteNote}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+        </ScrollableFeed>
       </div>
     );
   }
