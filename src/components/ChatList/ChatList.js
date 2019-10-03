@@ -39,13 +39,13 @@ class ChatList extends Component {
 
     return (
       <div>
-        <ScrollableFeed>
-          {isLoading ? (
-            <Spinner />
-          ) : (
-            <section>
+        {isLoading ? (
+          <Spinner />
+        ) : (
+          <section>
+            <ScrollableFeed>
               <ul className={styles.list}>
-                {messages.map(message => (
+                {messages.reverse().map(message => (
                   <li className={styles.item} key={message.id}>
                     <ChatItem
                       messages={message}
@@ -58,9 +58,9 @@ class ChatList extends Component {
                   </li>
                 ))}
               </ul>
-            </section>
-          )}
-        </ScrollableFeed>
+            </ScrollableFeed>
+          </section>
+        )}
       </div>
     );
   }

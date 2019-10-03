@@ -28,7 +28,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js",
-    "format": "eslint src/**/*.js --fix"
+    "format": "eslint src/**/*.js --fix",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -59,5 +61,5 @@
   "main": "index.js",
   "repository": "https://github.com/LiliyaGavrishchishena/chat.git",
   "author": "liliya.gavrishchishena@gmail.com",
-  "description": "React, Redux"
+  "description": "React, Redux, Moment.js"
 }

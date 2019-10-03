@@ -7,11 +7,11 @@ import styles from './MyChatPage.module.css';
 
 const MyChatPage = () => (
   <section className={styles.container}>
-    <div className={styles.list}>
-      <ChatList />
-    </div>
     <div className={styles.input}>
       <MessageInput />
+    </div>
+    <div className={styles.list}>
+      <ChatList />
     </div>
   </section>
 );

@@ -48,7 +48,7 @@ class MessageInput extends Component {
   render() {
     const { message } = this.state;
     return (
-      <div>
+      <div className={styles.chat}>
         <form onSubmit={this.handleSubmitForm} className={styles.form}>
           <input
             className={styles.input}
