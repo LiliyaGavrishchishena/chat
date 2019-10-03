@@ -1,0 +1,2 @@
+(window.webpackJsonpchat=window.webpackJsonpchat||[]).push([[0],{94:function(n,t,e){"use strict";e.r(t);var a=e(0),c=e.n(a);t.default=function(){return c.a.createElement("div",null,"AboutPage")}}}]);
+//# sourceMappingURL=about-page.95d1fa7f.chunk.js.map
